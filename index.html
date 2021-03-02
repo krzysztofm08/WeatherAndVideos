@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & Videos</title>
+    <meta name="description" content="Weather and Videos">
+    <meta name="author" content="Krzysztof Mącznik">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="Video_List_Style.css">
+</head>
+<body>
+    <div class="mainWrap">
+        <div class="wrapTop">
+        <header>
+            <h1>Weather & Videos</h1>
+        </header>
+            <div class="weatherMain">
+            <h3>Weather for today</h3>
+                <div class="weatherTop">
+                    <h3 class="cityName">City name</h3>
+                    <p class="weatherError"></p>
+                    <input class="cityTyped" type="text" placeholder="Type Your location here...">
+                    <button class="weatherSend">Send</button>
+                    <img src="weather/unknown.png" alt="Picture describing the weather" class="photo">
+                </div>
+                <div class="weatherBottom">
+                        <div>
+                            <p>Weather:</p>
+                            <p class="weather"></p>
+                        </div>
+                        <div>
+                            <p>Temperature:</p>
+                            <p class="temperature"></p>
+                        </div>
+                        <div>
+                            <p>Humidity:</p>
+                            <p class="humidity"></p>
+                        </div>  
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapBottom">
+
+            <div class="videosMain">
+                <div class="videosTop">
+                    <h3>Your videos from YouTube for today: </h3>
+                    <p class="wrongInputNameAlert">Enter the correct YouTube link</p>
+                    <div class="videosTopB">
+                    <input type="text" class="videoInput" placeholder="Enter new video link from the browser here...">
+                    <button class="addVideoBtn">Add</button>
+                    </div>
+                    <p class="noVideoAlert">No videos on the list</p>
+                    <p class="noVideoAlert">Enter the video name</p>
+            </div>
+                <ul class="listOfVideos">
+                    <li class="listItem" id="0">
+                        <iframe width="250" height="200" allowfullscreen src ="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+                        <div class="tools"><button class="btnComplete"><i class="fas fa-check"></i></button><button class="btnEdit">Edit</button><button class="btnDelete"><i class="fas fa-times"></i></button></div></li>
+                    <li class="listItem" id="1">
+                        <iframe width="250" height="200" allowfullscreen src ="https://www.youtube.com/embed/kXYiU_JCYtU"></iframe>
+                        <div class="tools"><button class="btnComplete"><i class="fas fa-check"></i></button><button class="btnEdit">Edit</button><button class="btnDelete"><i class="fas fa-times"></i></button></div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="popup">
+            <div>
+                <h3 class="popuph3">Edit video :</h3>
+                <p class="popupInfo"></p>
+                <div class="popupContainer">
+                    <p class="noInputNameAlert">Enter the correct edited video link</p>
+                        <div></div>
+                        <input type="text" class="popupInput" placeholder="Insert video name...">
+                        <button class="popupAccept">Accept</button>
+                        <button class="popupCancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type= "text/javascript" src="Video_List_JS.js"></script>
+</body>
+</html>
